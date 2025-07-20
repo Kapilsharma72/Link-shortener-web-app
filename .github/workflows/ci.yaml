@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Install react-router-dom
+        run: npm install react-router-dom
+
       - name: Run lint
         run: npm run lint || echo "No lint script defined"
 
