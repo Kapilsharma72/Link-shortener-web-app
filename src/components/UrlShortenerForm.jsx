@@ -23,10 +23,9 @@ export default function UrlShortenerForm() {
   const [submitting, setSubmitting] = useState(false);
   const [globalError, setGlobalError] = useState('');
 
-  // Just resets a row
-  function resetRow(idx) {
-    setRows(rws => rws.map((r, i) => i === idx ? { url: '', validity: '', shortcode: '', error: '', result: null } : r));
-  }
+  // function resetRow(idx) {
+  //   // Unused function commented out to fix ESLint error
+  // }
 
   // Not DRY, but clearer for beginners
   function handleChange(idx, field, value) {
