@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: link-shortener-web-app
+  namespace: frontend-backend
+  labels:
+    app: link-shortener-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: link-shortener-web-app
+  template:
+    metadata:
+      labels:
+        app: link-shortener-web-app
+    spec:
+      containers:
+        - name: link-shortener-web-app
+          image: kapilsharma72/link-shortener-web-app:latest
+          ports:
+            - containerPort: 80

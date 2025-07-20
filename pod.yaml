@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: frontend-backend
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: link-shortener-web-app
+  namespace: frontend-backend
+  labels:
+    app: link-shortener-web-app
+spec:
+  containers:
+    - name: link-shortener-web-app
+      image: kapilsharma72/link-shortener-web-app:latest
+      ports:
+        - containerPort: 80
