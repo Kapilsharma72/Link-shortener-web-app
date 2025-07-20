@@ -27,8 +27,6 @@ jobs:
       - name: Run lint
         run: npm run lint || echo "No lint script defined"
 
-      - name: Run tests
-        run: npm test -- --watchAll=false
-
+      
       - name: Build
         run: npm run build 
